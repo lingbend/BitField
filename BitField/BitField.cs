@@ -1,9 +1,14 @@
-﻿﻿using System.Numerics;
+﻿﻿#nullable enable
+using System.Numerics;
 using System.Collections;
 using System.Drawing;
 
 using static Medallion.Bits;
 using System.IO.Compression;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.IO;
 
 namespace BitField
 {
