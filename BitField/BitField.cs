@@ -54,7 +54,6 @@ namespace BitField
         }
 
         private uint _border_num;
-        private int _id;
         private bool[] _queue_fill;
         private bool[] _queue_empty;
         public BitField(uint rows, uint columns, uint borders = 1)
@@ -577,12 +576,14 @@ namespace BitField
         }
 
         #if DEBUG
+        #pragma warning disable CA1416 // Validate platform compatibility
         public void ToBMP(string name = "", string color = "0xFF000000", bool overlay = false)
         {
             Image image;
             Graphics graphic;
             if (!overlay)
             {
+
                 image = new Bitmap((int) (30*_size.Item2), (int) (30*_size.Item1));
                 graphic = Graphics.FromImage(image);
             }
