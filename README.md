@@ -1,4 +1,4 @@
-# BitField API Documentation
+# BitField
 
 `BitField` is a high-performat C# library for managing 2D bitfields. Engineered for speed and memory efficiency, it is designed for high-frequency applications like real-time cellular automata, large-scale procedural generation, and complex 2D boolean grid analysis.
 
