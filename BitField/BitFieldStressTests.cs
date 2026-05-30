@@ -1,3 +1,4 @@
+#if !UNITY_EDITOR
 namespace BitField
 {
 #pragma warning disable MSTEST0045 // Use 'CooperativeCancellation = true' with '[Timeout]'
@@ -102,3 +103,4 @@ namespace BitField
     
     }
 }
+#endif

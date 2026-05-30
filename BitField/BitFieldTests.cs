@@ -1,3 +1,4 @@
+#if !UNITY_EDITOR
 namespace BitField
 {
     [TestClass]
@@ -1005,3 +1006,4 @@ namespace BitField
 
 
 }
+#endif
