@@ -1,4 +1,4 @@
-#if !UNITY_EDITOR
+#if DEBUG && !UNITY_EDITOR
 namespace BitField
 {
     [TestClass]
