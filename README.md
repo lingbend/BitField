@@ -1,6 +1,6 @@
 # BitField
 
-`BitField` is a high-performat C# library for managing 2D bitfields. Engineered for speed and memory efficiency, it is designed for high-frequency applications like real-time cellular automata, large-scale procedural generation, and complex 2D boolean grid analysis.
+`BitField` is a high-performant C# library for managing 2D bitfields. Engineered for speed and memory efficiency, it is designed for high-frequency applications like real-time cellular automata, large-scale procedural generation, and complex 2D boolean grid analysis.
 
 The library uses **1-based indexing** for public API calls and maintains an internal, inaccessible 1-cell border to optimize neighbor-checking algorithms.
 
