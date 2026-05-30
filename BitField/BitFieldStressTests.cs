@@ -46,10 +46,10 @@ namespace BitField
         [TestMethod]
         public void BitFieldGetSlice_Huge_Valid()
         {
-            BitField grid = new BitField(800, 800);
+            BitField field = new BitField(800, 800);
             for (uint i = 0; i < 1000; i++)
             {
-                _ = grid.GetSlice((i%800)+1, (i%800)+1, (i%800)+1, (uint) ((i*.5)%800)+1);
+                _ = field.GetSlice((i%800)+1, (i%800)+1, (i%800)+1, (uint) ((i*.5)%800)+1);
             }
         }
 
@@ -57,10 +57,10 @@ namespace BitField
         [TestMethod]
         public void BitFieldSetSlice_Huge_Valid()
         {
-            BitField grid = new BitField(800, 800);
+            BitField field = new BitField(800, 800);
             for (uint i = 0; i < 1000; i++)
             {
-                grid.SetSlice((i%800)+1, (i%800)+1, (i%800)+1, (uint) ((i*.25)%800)+1, 1);
+                field.SetSlice((i%800)+1, (i%800)+1, (i%800)+1, (uint) ((i*.25)%800)+1, 1);
             }
         }
 
@@ -68,11 +68,11 @@ namespace BitField
         [TestMethod]
         public void BitFieldInsertRowCol_Huge_Valid()
         {
-            BitField grid = new BitField(800, 800);
+            BitField field = new BitField(800, 800);
             for (uint i = 0; i < 1000; i++)
             {
-                grid.InsertRow((i % 800) + 1);
-                grid.InsertRow((i % 800) + 1);
+                field.InsertRow((i % 800) + 1);
+                field.InsertRow((i % 800) + 1);
             }
         }
 
@@ -80,11 +80,11 @@ namespace BitField
         [TestMethod]
         public void BitFieldGetSliceORAND_Huge_Valid()
         {
-            BitField grid = new BitField(800, 800);
+            BitField field = new BitField(800, 800);
             for (uint i = 0; i < 1000; i++)
             {
-                _ = grid.GetSliceOR((i%800)+1, (i%800)+1, (i%800)+1, (uint) ((i*.5)%800)+1);
-                _ = grid.GetSliceAND((i%800)+1, (i%800)+1, (i%800)+1, (uint) ((i*.5)%800)+1);
+                _ = field.GetSliceOR((i%800)+1, (i%800)+1, (i%800)+1, (uint) ((i*.5)%800)+1);
+                _ = field.GetSliceAND((i%800)+1, (i%800)+1, (i%800)+1, (uint) ((i*.5)%800)+1);
             }
         }
 
@@ -92,11 +92,11 @@ namespace BitField
         [TestMethod]
         public void BitFieldDeleteRowCol_Huge_Valid()
         {
-            BitField grid = new BitField(800, 800);
+            BitField field = new BitField(800, 800);
             for (uint i = 0; i < 799; i++)
             {
-                grid.DeleteRow(800 - i);
-                grid.DeleteCol(800 - i);
+                field.DeleteRow(800 - i);
+                field.DeleteCol(800 - i);
             }
         }
     
