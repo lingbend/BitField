@@ -92,6 +92,11 @@ namespace BitField
         /// <summary>
         /// The current value (0 or 1) assigned to the internal inaccessible border.
         /// </summary>
+        public uint BorderNum{get {return _border_num;}}
+
+        /// <summary>
+        /// The current value (0 or 1) assigned to the internal inaccessible border.
+        /// </summary>
         private uint _border_num;
 
         /// <summary>
@@ -112,7 +117,7 @@ namespace BitField
         /// <param name="borders">Default value for the border (0 or 1).</param>
         public BitField(uint rows, uint columns, uint borders = 1)
         {
-            _border_num = 1;
+            _border_num = borders;
             if (rows == 0 || columns == 0)
             {
                 throw new IndexOutOfRangeException();
@@ -138,7 +143,7 @@ namespace BitField
         /// <param name="old_field">The BitField to copy.</param>
         public BitField(BitField old_field)
         {
-            _border_num = 1;
+            _border_num = old_field._border_num;
             if (old_field._size.Item1 == 0 || old_field._size.Item2 == 0)
             {
                 throw new IndexOutOfRangeException();
