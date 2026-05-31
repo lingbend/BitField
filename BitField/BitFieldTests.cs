@@ -17,6 +17,33 @@ namespace BitField
         }
 
         [TestMethod]
+        public void BitFieldConstructor_DefaultConstructorBorder1_Valid()
+        {
+            BitField field = new BitField(5, 5, 1);
+            Assert.AreEqual(1u, field.BorderNum);
+        }
+
+        [TestMethod]
+        public void BitFieldConstructor_DefaultConstructorBorder0_Valid()
+        {
+            BitField field = new BitField(5, 5, 0);
+            Assert.AreEqual(0u, field.BorderNum);
+        }
+
+        [TestMethod]
+        public void BitFieldConstructor_CopyConstructorBorder1_Valid()
+        {
+            BitField field = new BitField(5, 5, 1);
+            Assert.AreEqual(1u, field.BorderNum);
+        }
+
+        [TestMethod]
+        public void BitFieldConstructor_CopyConstructorBorder0_Valid()
+        {
+            BitField field.AreEqual(0u, field.BorderNum);
+        }
+
+        [TestMethod]
         public void BitFieldConstructor_2Border_Invalid()
         {
             Assert.Throws<ArgumentException>(() => new BitField(5, 5, 2));
