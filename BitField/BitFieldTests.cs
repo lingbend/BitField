@@ -40,7 +40,8 @@ namespace BitField
         [TestMethod]
         public void BitFieldConstructor_CopyConstructorBorder0_Valid()
         {
-            BitField field.AreEqual(0u, field.BorderNum);
+            BitField field = new BitField(5, 5, 0u);
+            Assert.AreEqual(0u, field.BorderNum);
         }
 
         [TestMethod]
