@@ -34,14 +34,14 @@ namespace BitField
         public void BitFieldConstructor_CopyConstructorBorder1_Valid()
         {
             BitField field = new BitField(5, 5, 1);
-            Assert.AreEqual(1u, field.BorderNum);
+            Assert.AreEqual(1u, new BitField(field).BorderNum);
         }
 
         [TestMethod]
         public void BitFieldConstructor_CopyConstructorBorder0_Valid()
         {
             BitField field = new BitField(5, 5, 0u);
-            Assert.AreEqual(0u, field.BorderNum);
+            Assert.AreEqual(0u, new BitField(field).BorderNum);
         }
 
         [TestMethod]
